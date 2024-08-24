@@ -15,6 +15,7 @@
 # 2. Code
 
 This is a code block
+
     code goes brrrr
     rrrrrrrrrrrrrr
 ^
@@ -43,7 +44,6 @@ import python
 
 # 4. Tables
 
-|---
 | first|second|third|
 |----|:-----|------:|
 | first|second|third|
@@ -56,7 +56,7 @@ import python
 
 # 5. Links
 
-Just use brackets <vg.no>
+Just use brackets <https://vg.no>
 
 # 6. Images
 
