@@ -1,0 +1,12 @@
+title: TheByteDungeon
+theme: jekyll-theme-chirpy
+markdown: kramdown
+paginate: 5
+header_pages:
+  - index.md
+  - about.md
+  - blog/index.md
+  - projects/index.md
+
+plugins:
+  - jemoji
