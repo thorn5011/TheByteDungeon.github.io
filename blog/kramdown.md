@@ -58,6 +58,9 @@ import python
 
 Just use brackets <https://vg.no>
 
+[_config.yml](../_config.yml)
+
+
 # 6. Images
 
 ![smiley](../images/fine.png){:height="36px" width="36px"}
