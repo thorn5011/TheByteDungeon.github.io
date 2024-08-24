@@ -3,5 +3,5 @@ layout: default
 title: Blog
 ---
 # Blog Posts
-- [Understanding GitHub Pages](post1.md)
-- [Exploring Markdown](post2.md)
+- [Understanding GitHub Pages and themes](jekyll_themes.md)
+- [Exploring Markdown with "kramdown"?](kramdown.md)
