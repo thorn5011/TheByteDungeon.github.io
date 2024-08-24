@@ -4,7 +4,7 @@ title: "Understanding GitHub Pages"
 date: 2024-08-24
 categories: tech
 ---
-# Understanding GitHub Pages
+
 
 GitHub Pages allows you to host websites directly from your GitHub repository. Simple as pie? :heart: :computer:
 
