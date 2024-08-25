@@ -1,6 +1,11 @@
-# 1. Kramdown
+---
+layout: blog_post
+title: "Playing with Karmdown"
+date: 2024-08-24
+categories: tech
+---
 
-- [1. Kramdown](#1-kramdown)
+
 - [2. Code](#2-code)
 - [3. Lists](#3-lists)
 - [4. Tables](#4-tables)
@@ -63,6 +68,8 @@ Just use brackets <https://vg.no>
 
 # 6. Images
 
+Size to use in inline with text? ![smiley](../images/fine.png){:height="20px" width="20px"}
+
 ![smiley](../images/fine.png){:height="36px" width="36px"}
 
 ![smiley](../images/fine.png){:height="100px" width="100px"}
@@ -99,9 +106,6 @@ ls -l
 <div class="content">
     <p>Lorem ipsum...</p>
     <p>
-        ```sh
-        ls -l
-        ```
         <pre>
             <code>
             this is code
