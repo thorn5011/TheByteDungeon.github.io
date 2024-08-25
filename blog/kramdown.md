@@ -99,9 +99,13 @@ ls -l
 <div class="content">
     <p>Lorem ipsum...</p>
     <p>
-    ```sh
-    ls -l
-    ```
-    <pre><code>this is code</pre></code>
+        ```sh
+        ls -l
+        ```
+        <pre>
+            <code>
+            this is code
+            </pre>
+        </code>
     </p>
 </div>
