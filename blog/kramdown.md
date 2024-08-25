@@ -12,6 +12,7 @@ categories: tech
 - [5. Links](#5-links)
 - [6. Images](#6-images)
 - [7. Expand sections](#7-expand-sections)
+- [Tables from sql](#tables-from-sql)
 
 
 <https://kramdown.gettalong.org/syntax.html>
@@ -113,3 +114,12 @@ ls -l
         </code>
     </p>
 </div>
+
+# Tables from sql
+
++---------+-------------+--------------------+--------------------+--------------+
+| success | login_count | distinct_usernames | distinct_passwords | distinct_ips |
++---------+-------------+--------------------+--------------------+--------------+
+|       0 |       61435 |               2303 |              38262 |          420 |
+|       1 |           9 |                  1 |                  7 |            9 |
++---------+-------------+--------------------+--------------------+--------------+
