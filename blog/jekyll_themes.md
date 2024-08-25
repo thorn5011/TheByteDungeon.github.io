@@ -1,6 +1,6 @@
 ---
-layout: post
-title: "Understanding GitHub Pages"
+layout: blog_post
+title: "Understanding GitHub Pages and Jekyll"
 date: 2024-08-24
 categories: tech
 ---
@@ -18,7 +18,7 @@ Some favorites:
 - [`minima`](https://jekyll.github.io/minima/) with some nice *themes*
 - [`cayman`](https://pages-themes.github.io/cayman/) seems smooth
 
-# Configuration
+# Configuration[](../_layout/blog_post.html)
 
 We just update the `theme` in the [_config.yml](../_config.yml) file.  
 `theme: jekyll-theme-chirpy`
@@ -26,3 +26,7 @@ We just update the `theme` in the [_config.yml](../_config.yml) file.
 ## plugins
 
 We can update the [_config.yml](../_config.yml) to include new features using plugins. We can then support [GitHub emojis](https://gist.github.com/rxaviers/7360908) with `jemoji`. :metal:
+
+## Layouts
+
+Default layout (ex. `layout: post`) can be found [here](https://github.com/pages-themes/hacker/tree/master/_layouts). You can create your own [like this](../_layout/blog_post.html).
