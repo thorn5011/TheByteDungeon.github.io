@@ -1,7 +1,6 @@
 title: TheByteDungeon
 theme: jekyll-theme-hacker
 markdown: kramdown
-paginate: 5
 header_pages:
   - index.md
   - about.md
