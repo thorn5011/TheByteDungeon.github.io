@@ -103,18 +103,6 @@ ls -l
 </details>
 
 
-<button type="button" class="collapsible">Open Collapsible</button>
-<div class="content">
-    <p>Lorem ipsum...</p>
-    <p>
-        <pre>
-            <code>
-            this is code
-            </pre>
-        </code>
-    </p>
-</div>
-
 # Tables from sql
 
 +---------+-------------+--------------------+--------------------+--------------+
