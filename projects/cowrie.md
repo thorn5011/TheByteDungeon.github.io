@@ -76,7 +76,7 @@ I added a hostname and set SSH to use old settings, because why not?
 
 The updated `cowrie.cfg` now looks like this:
 
-<details>
+<details markdown="1">
 
 <summary>cowrie.cfg</summary>
 
@@ -108,7 +108,7 @@ Picking up the issue again, I was determined to use a tried and tested system—
 After setting up the DB, we now need to update the config:
 
 
-<details>
+<details markdown="1">
 
 <summary>cowrie.cfg</summary>
 
@@ -176,7 +176,7 @@ Yes, we should, and Cowrie has a number of built-in third-party solutions. Perso
 What I want to do is share all this valuable intel with the world, and it's really simple:
 
 
-<details>
+<details markdown="1">
 
 <summary>cowrie.cfg</summary>
 
