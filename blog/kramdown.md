@@ -1,5 +1,5 @@
 ---
-layout: blog_post
+layout: post
 title: "Playing with Karmdown"
 date: 2024-08-24
 categories: tech

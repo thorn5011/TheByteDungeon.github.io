@@ -1,5 +1,5 @@
 ---
-layout: blog_post
+layout: post
 title: "Understanding GitHub Pages and Jekyll"
 date: 2024-08-24
 categories: tech
