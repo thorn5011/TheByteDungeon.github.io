@@ -76,3 +76,32 @@ Just use brackets <https://vg.no>
 Hello there :smile:
 
 </details>
+
+<details>
+<summary>Code block</summary>
+
+```sh
+ls -l
+```
+</details>
+
+
+<details markdown="1">
+<summary>Code block with markdown setting</summary>
+
+```sh
+ls -l
+```
+</details>
+
+
+<button type="button" class="collapsible">Open Collapsible</button>
+<div class="content">
+    <p>Lorem ipsum...</p>
+    <p>
+    ```sh
+    ls -l
+    ```
+    <pre><code>this is code</pre></code>
+    </p>
+</div>
