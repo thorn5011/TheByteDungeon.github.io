@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: newpost
 title: "Understanding GitHub Pages and Jekyll"
 date: 2024-08-24
 categories: tech
@@ -29,4 +29,4 @@ We can update the [_config.yml](../_config.yml) to include new features using pl
 
 ## Layouts
 
-Default layout (ex. `layout: post`) can be found [here](https://github.com/pages-themes/hacker/tree/master/_layouts). You can create your own [like this](../_layout/blog_post.html).
+Default layout (ex. `layout: post`) can be found [here](https://github.com/pages-themes/hacker/tree/master/_layouts). You can create your own [like this](../_layout/newpost.html).
