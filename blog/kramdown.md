@@ -13,6 +13,7 @@ categories: tech
 - [6. Images](#6-images)
 - [7. Expand sections](#7-expand-sections)
 - [Tables from sql](#tables-from-sql)
+- [Buttons](#buttons)
 
 
 <https://kramdown.gettalong.org/syntax.html>
@@ -105,9 +106,17 @@ ls -l
 
 # Tables from sql
 
+```txt
 +---------+-------------+--------------------+--------------------+--------------+
 | success | login_count | distinct_usernames | distinct_passwords | distinct_ips |
 +---------+-------------+--------------------+--------------------+--------------+
 |       0 |       61435 |               2303 |              38262 |          420 |
 |       1 |           9 |                  1 |                  7 |            9 |
 +---------+-------------+--------------------+--------------------+--------------+
+```
+
+# Buttons 
+
+[Click me](http://www.google.com){: .btn}
+
+
