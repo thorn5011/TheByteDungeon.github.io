@@ -2,4 +2,4 @@
 layout: default
 ---
 
-[travolta](images/travolta.gif)
+![travolta](images/travolta.gif)
