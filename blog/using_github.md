@@ -14,7 +14,7 @@ Each time I setup a new box, be it a new installation of a Raspberry or be it a 
 
 # How to login with gh
 
-1. Paste `BROWSER=false gh auth login` (since I want to access GitHub from my desktop, I'll use `BROWSER=false`)
+1. Paste `BROWSER=false gh auth login` (since I want to access GitHub from my desktop and not the Pi, I'll use `BROWSER=false`)
    ![github_setup2](../images/blogs/github_setup2.png)
 2. Access [https://github.com/login/device](https://github.com/login/device) from desktop
 3. Use the one-time code
@@ -23,7 +23,7 @@ Each time I setup a new box, be it a new installation of a Raspberry or be it a 
 1. Success!
 ![github_setup3](../images/blogs/github_setup3.png)
 
-But wait, what was that, "..credentials saved in **plain text**"? Perhaps that is not a surprise once we consider how any authentication schema work but I like that it is clearly stated.
+But wait, what was that, "..credentials saved in **plain text**"? Perhaps that is not a surprise once we consider how any authentication schema work but I like that it is clearly stated in this case.
 
 Here is the culprit -> `cat $HOME/.config/gh/hosts.yml`
 ```sh
@@ -39,7 +39,7 @@ github.com:
 
 # Results
 
-Clone wit ease `gh repo clone thorn5011/repo_name`, now I can continue to clone, push, pull and all those wonderful actions without a need to re-authenticate! 
+Clone wit ease by using `gh repo clone thorn5011/repo_name`. Now I can continue to clone, push, pull and use all those wonderful actions without the need to re-authenticate! 
 
 ```sh
 $ git add lol123
@@ -51,12 +51,12 @@ Username for 'https://github.com':
 - `GitHub`: a web-based platform for hosting a collaborating. Owned by Microsoft
 - `Git`: an open-source tool for version control owned by the Linux foundation and developed by the G.O.A.T. Linus Torvalds.
 
-That means `gh` is a tool to interact with GitHub, while `git` can be used to many other vendors as long as the support git for version control. BUT we can actually use gh to help use setup git - `gh auth git-setup` ![micdrop](../images/micdrop.gif){:height="36px" width="36px"}
+That means `gh` is a tool to interact with GitHub, while `git` can be used to interact with many other vendors as long as the support git for version control. BUT we can actually use gh to help use setup git; `gh auth git-setup` ![micdrop](../images/micdrop.gif){:height="36px" width="36px"}
 
 
 
 # Conclusion
 
-We can use `gh` for cloning repos, creating issues, PR etc. For pushing and pulling we still need `git`. But we can also get help from gh  to set up git for further use with:
+We can use `gh` for cloning repos, creating issues, PR etc. For pushing and pulling we still need `git`. But what is really good is that we can use gh to set up git with:
 
 `gh auth git-setup`
