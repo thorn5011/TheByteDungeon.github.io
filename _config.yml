@@ -1,6 +1,7 @@
 title: TheByteDungeon
 theme: jekyll-theme-hacker
 markdown: kramdown
+css: [assets/css/custom.css]
 header_pages:
   - index.md
   - about.md
