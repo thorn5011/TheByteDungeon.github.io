@@ -15,9 +15,9 @@ After running the Cowrie honeypot for some days we have some data to start looki
   - [:sparkles: Look at all that pretty data](#sparkles-look-at-all-that-pretty-data)
     - [Quick Summary](#quick-summary)
     - [Top IPs](#top-ips)
-  - [Passwords](#passwords)
-  - [Usernames](#usernames)
-  - [When are the Threat actors trying to login?](#when-are-the-threat-actors-trying-to-login)
+    - [Passwords](#passwords)
+    - [Usernames](#usernames)
+    - [When are the Threat actors trying to login?](#when-are-the-threat-actors-trying-to-login)
 - [AbuseIPDB](#abuseipdb)
   - [Enrich data with `check`](#enrich-data-with-check)
 - [Conclusion](#conclusion)
@@ -310,7 +310,7 @@ LIMIT 10;
 
 The [189.206.56.113](https://www.abuseipdb.com/check/189.206.56.113) was our *top man* located at an ISP line in Mexico. :tophat:
 
-## Passwords
+### Passwords
 
 ```mysql
 SELECT password, COUNT(*) as count
@@ -350,7 +350,7 @@ FROM (
 
 
 
-## Usernames
+### Usernames
 
 ```mysql
 SELECT username, COUNT(*) as count FROM auth GROUP BY username ORDER BY count desc limit 10;
@@ -412,7 +412,7 @@ LIMIT 10;
 ```
 There are a lot of duplicates, I guess it is not a bad idea to keep trying simple credentials, just waiting to a admin to be lazy or for some misconfiguration. 
 
-## When are the Threat actors trying to login?
+### When are the Threat actors trying to login?
 
 Logins over time:
 
