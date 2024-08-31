@@ -8,10 +8,10 @@ categories: tech
 
 After running the Cowrie honeypot for some days we have some data to start looking into. :eyes:
 
-- [SQL data](#sql-data)
-  - [The Data](#the-data)
+- [Dig into SQL and data](#dig-into-sql-and-data)
+  - [The Data *(and the mistake)*](#the-data-and-the-mistake)
     - [Massage the data](#massage-the-data)
-    - [Tables](#tables)
+    - [The Tables](#the-tables)
   - [:sparkles: Look at all that pretty data](#sparkles-look-at-all-that-pretty-data)
     - [Quick Summary](#quick-summary)
     - [Top IPs](#top-ips)
@@ -22,10 +22,10 @@ After running the Cowrie honeypot for some days we have some data to start looki
   - [Enrich data with `check`](#enrich-data-with-check)
 - [Conclusion](#conclusion)
 
+---
+# Dig into SQL and data
 
-# SQL data
-
-## The Data
+## The Data *(and the mistake)*
 
 So before we start to analyze the data, I have a confession to make.. When I was changing some values and config around I accidentally messed up the `userdb.txt` file, which Cowrie uses to authenticate users. I made it so that there was no password required, meaning everyone was welcomed to login.. here at the `TheByteDungeon` we don't discriminate!
 
@@ -80,7 +80,7 @@ DROP TABLE common_session_ids;
 
 
 
-### Tables
+### The Tables
 
 We've got 11 tables with data to play with:
 ```sql
@@ -252,7 +252,7 @@ MariaDB [cowrie]> DESCRIBE ttylog;
 </details>
 
 
-Table info:  
+**General Table info:**  
 - **`auth`**: authentication data: user, password, login status
 - **`clients`**: ssh version, e.g. `SSH-2.0-OpenSSH_6.6.1`
 - **`downloads`**: if an authenticated user downloads a file we can find the path and the hash
