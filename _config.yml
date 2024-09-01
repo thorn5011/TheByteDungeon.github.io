@@ -2,11 +2,35 @@ title: TheByteDungeon
 theme: jekyll-theme-hacker
 markdown: kramdown
 css: [assets/css/custom.css]
-header_pages:
-  - index.md
-  - about.md
-  - blog/index.md
-  - projects/index.md
+url: http://thebytedungeon.thoren.life/
+domain: thebytedungeon.thoren.life
+baseurl: ""
+include:
+  - _pages
+# header_pages:
+#   - index.md
+#   - about.md
+#   - _posts/index.md
+#   - _posts/projects/index.md
 
 plugins:
   - jemoji
+  - jekyll-sitemap
+
+
+defaults:
+  -
+    scope:
+      type: posts
+      path: _posts
+    values:
+      is_post: true
+      layout: post
+      permalink: /blog/:categories/:title/
+  -
+    scope:
+      type: pages
+      path: _pages
+    values:
+      is_post: false
+      layout: default
