@@ -5,7 +5,7 @@ permalink: /
 
 # Welcome to the TheByteDungeon
 
-TheByteDungeon is a personal tech blog where I document my thoughts, explore technical challenges, and reinforce my knowledge.
+{{ site.description }}
 
 ## :pencil2: [Blog](blog)
   
