@@ -485,7 +485,7 @@ I am not really sure if there are any insights to be had here based on the data 
 ---
 # AbuseIPDB
 
-We did upload start to upload data to AbuseIPDB in [the previous part](2024-08-24-cowrie.md), so we now have some results. *Note* that we have reported data to Abuse for a much longer time than the data we have available in SQL. At the time of writing, we've reported 18k IP, yay! :confetti_ball:
+We did upload start to upload data to AbuseIPDB in [the previous part]({{site.baseurl}}/blog/tech/cowrie/), so we now have some results. *Note* that we have reported data to Abuse for a much longer time than the data we have available in SQL. At the time of writing, we've reported 18k IP, yay! :confetti_ball:
 
 <a href="https://www.abuseipdb.com/user/43041" title="AbuseIPDB is an IP address blacklist for webmasters and sysadmins to report IP addresses engaging in abusive behavior on their networks">
 	<img src="https://www.abuseipdb.com/contributor/43041.svg" alt="AbuseIPDB Contributor Badge" style="width: 401px;">
