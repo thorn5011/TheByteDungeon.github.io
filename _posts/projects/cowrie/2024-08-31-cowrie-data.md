@@ -498,7 +498,7 @@ AbuseIPDB also provide a pretty cool `check` API which can enrich any IP data we
 
 Example of data in the GUI:
 
-![abuseipdb_reported_ip](../../../assets/images/cowrie/abuseipdb_reported_ip.png){:height="300x" width="300x"}
+![abuseipdb_reported_ip](/assets/images/cowrie/abuseipdb_reported_ip.png){:height="300x" width="300x"}
 
 Using the API:
 ```sh

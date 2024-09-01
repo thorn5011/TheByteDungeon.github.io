@@ -16,13 +16,13 @@ Each time I setup a new box, be it a new installation of a Raspberry or be it a 
 # How to login with gh
 
 1. Paste `BROWSER=false gh auth login` (since I want to access GitHub from my desktop and not the Pi, I'll use `BROWSER=false`)
-   ![github_setup2](../assets/images/blogs/github_setup2.png)
+   ![github_setup2](/assets/images/blogs/github_setup2.png)
 2. Access [https://github.com/login/device](https://github.com/login/device) from desktop
 3. Use the one-time code
 4. Allow access and verify with MFA
-![github_setup1](../assets/images/blogs/github_setup1.png)
+![github_setup1](/assets/images/blogs/github_setup1.png)
 1. Success!
-![github_setup3](../assets/images/blogs/github_setup3.png)
+![github_setup3](/assets/images/blogs/github_setup3.png)
 
 But wait, what was that, "..credentials saved in **plain text**"? Perhaps that is not a surprise once we consider how any authentication schema work but I like that it is clearly stated in this case.
 
@@ -52,7 +52,7 @@ Username for 'https://github.com':
 - `GitHub`: a web-based platform for hosting a collaborating. Owned by Microsoft
 - `Git`: an open-source tool for version control owned by the Linux foundation and developed by the G.O.A.T. Linus Torvalds.
 
-That means `gh` is a tool to interact with GitHub, while `git` can be used to interact with many other vendors as long as the support git for version control. BUT we can actually use gh to help use setup git; `gh auth git-setup` ![micdrop](../assets/images/micdrop.gif){:height="36px" width="36px"}
+That means `gh` is a tool to interact with GitHub, while `git` can be used to interact with many other vendors as long as the support git for version control. BUT we can actually use gh to help use setup git; `gh auth git-setup` ![micdrop](/assets/images/micdrop.gif){:height="36px" width="36px"}
 
 
 

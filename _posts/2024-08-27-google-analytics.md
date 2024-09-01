@@ -67,11 +67,11 @@ Apparently the [new version of Google analytics](https://support.google.com/anal
 So how does it look? Well, of course there ain't much data as of now (and it will be a pretty flat graph in the forseeable future as well :wink: ). Let's head over to [analytics.google.com](https://analytics.google.com).
 
 There are data on location, interest, sex, age and language. We can also get data on "user engagement", i.e. how long did the user stay and what did she view. We can customize this, but this is the default view:
-![google_analytics](../assets/images/blogs/google_analytics2.png)
-![google_analytics](../assets/images/blogs/google_analytics.png)
+![google_analytics](/assets/images/blogs/google_analytics2.png)
+![google_analytics](/assets/images/blogs/google_analytics.png)
 
 Woh, some fun tech data! Platform, screen resolution, browser etc. :computer:
-![google_analytics](../assets/images/blogs/google_analytics3.png)
+![google_analytics](/assets/images/blogs/google_analytics3.png)
 
 
 # Conclusion
