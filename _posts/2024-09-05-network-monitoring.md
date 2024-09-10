@@ -1,6 +1,6 @@
 ---
 layout: newpost
-title: "Monitor my network connection go go?.."
+title: "Monitor my network connection with go?"
 date: 2024-09-05
 tags: [go, monitoring, sql]
 categories: tech
@@ -8,7 +8,7 @@ categories: tech
 
 I often get the feeling that my network is acting slow on purpose. Often pages are stuck loading, seemingly without reason, and when I start up a ping, there is nothing wrong. Continuing to resolve the troublesome domain progresses me no further and when I more move back to the browser tab, everything seems fine again..
 
-Grab your tinfolis and let's get to the bottom of this conspiracy! *(we shall at least try)*
+Grab your tinfoils and let's get to the bottom of this conspiracy! *(we shall at least try)*
 
 ![tinfoil hats](/assets/images/blogs/tinfoil.jpg)
 
@@ -42,7 +42,7 @@ I simply want a script to loop through a few different DNS servers and resolve a
 
 The script scan be found [here](https://github.com/thorn5011/sharing-is-caring/tree/main/netMon).
 
-Learnt to code some very simple go, with arugments, different outputs and a bunch of troubleshooting.
+Learnt to code some very simple go, with arguments, different outputs and a bunch of troubleshooting.
 
 
 ## Set variables for the script to use
@@ -75,7 +75,7 @@ SHOW GRANTS FOR 'netMon_user'@'192.168.0.96';
 ---
 # Setup crontab for regular script execution
 
-Envrionment variables are stored in `/root/.envs` and imported at crontab execution:
+Environment variables are stored in `/root/.envs` and imported at crontab execution:
 
 ```sh
 */5 * * * * . /root/.envs && cd PATH/netMon/startMonitor && /usr/local/go/bin/go run PATH/netMon/startMonitor/netMon.go >> PATH/netMon/startMonitor/app.log
