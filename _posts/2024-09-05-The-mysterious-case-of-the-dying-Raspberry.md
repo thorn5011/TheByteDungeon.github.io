@@ -3,7 +3,7 @@ layout: newpost
 title: "The mysterious case of the dying Pi"
 date: 2024-09-05
 categories: [tech]
-tags: [cowrie,raspberry, mystery]
+tags: [raspberry, mystery]
 ---
 
 ```sh
