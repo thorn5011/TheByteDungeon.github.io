@@ -6,7 +6,7 @@ categories: [tech]
 tags: [cowrie, geolocation, ipinfo, sql]
 ---
 
-Cowrie provide us with a lot of great data, but one thing which I miss it information about the IP (loction, organaisation etc.). While you cannot draw conclusion based on the location of an IP, it is a **fun** datapoint to use since it allows us to visualize and perform some basic analysis. Let's try to enrich our exsising dataset with location data! :earth_africa:
+Cowrie provide us with a lot of great data, but one thing which I miss it information about the IP (location, organization etc.). While you cannot draw conclusion based on the location of an IP, it is a **fun** data point to use since it allows us to visualize and perform some basic analysis. Let's try to enrich our existing dataset with location data! :earth_africa:
 
 - [1. From where do we grab the location data?](#1-from-where-do-we-grab-the-location-data)
 - [2. IPInfo](#2-ipinfo)
@@ -33,7 +33,7 @@ For now I will use IPinfo due since it is really easy to use. I might also use A
 ---
 # 2. IPInfo
 
-After signin up for a free account we will grab our [API key](https://ipinfo.io/account/token) and test it out with `curl`:
+After sign-in up for a free account we will grab our [API key](https://ipinfo.io/account/token) and test it our with `curl`:
 ```sh
 echo "export IPINFOTOKEN=TOKEN" >> ~/.bashrc
 source ~/.bashrc
@@ -51,7 +51,7 @@ curl https://ipinfo.io/24.199.113.111/json?token=$IPINFOTOKEN
 ```
 
 [IPinfo Dashboard](https://ipinfo.io/account/home) give us a historical view over out API usage:
-![ipinfo](../assets/images/cowrie/cowrie_ipinfo.jpg)
+![ipinfo](/assets/images/cowrie/cowrie_ipinfo.jpg)
 
 ---
 # 3. Enrich data and upload to SQL
@@ -85,7 +85,7 @@ CREATE TABLE geoloc (
 
 To prevent a lot of unessecary API calls and SQL lookups, we'll use a "session cache" (list in python) and we will only refresh the Geo data once it is older than 90 days. 
 
-![ipinfo](../assets/images/cowrie/geooip_flow.png)
+![ipinfo](/assets/images/cowrie/geooip_flow.png)
 
 
 ## 3.3. Collect the data via IPinfo API
@@ -108,7 +108,7 @@ cursor.execute(query, (geo.ip, geo.hostname, geo.org, geo.city, geo.region, geo.
 
 Let's take a look at the new rows in the table:
 ```sql
-select * from geoloc limit 3;
+select * from geoloc limit 2;
 +----------------+----------+------------------------------------------------------+----------+-------------+---------+---------------+---------+---------------------+
 | ip             | hostname | org                                                  | city     | region      | country | timezone      | anycast | date_added          |
 +----------------+----------+------------------------------------------------------+----------+-------------+---------+---------------+---------+---------------------+
@@ -120,4 +120,4 @@ select * from geoloc limit 3;
 ---
 # 4. Conclusion
 
-After querying IPinfo to collect and enrich our attackers IP address, we can now use the location data to perform additional data analysis. :mag_right: 
+After querying IPinfo to collect and enrich our attackers IP addresses, we can now use the location data to perform additional data analysis. :mag_right: 
