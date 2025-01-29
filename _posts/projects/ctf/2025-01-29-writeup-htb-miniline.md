@@ -10,7 +10,7 @@ tags:
   - hardware
 ---
 
-- Challenge: [Mini line](https://app.hackthebox.com/challenges/miniline)
+- Challenge: [Mini line](https://app.hackthebox.com/challenges/Mini%2520Line)
 - Category: Hardware
 - Solve date: 2025-01-29
 
