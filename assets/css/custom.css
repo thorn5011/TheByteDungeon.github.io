@@ -25,3 +25,21 @@
     /* Other styles */
     text-align: center;
 }
+
+
+.copy-code-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px 10px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.copy-code-button:hover {
+  background: #2980b9;
+}
