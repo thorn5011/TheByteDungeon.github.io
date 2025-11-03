@@ -1,6 +1,6 @@
 ---
 layout: newpost
-title: "XSS Cheatsheet"
+title: "XSS Cheat sheet"
 date: 2025-11-03
 categories: [tech]
 tags: [hacking, xss]
