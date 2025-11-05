@@ -6,19 +6,21 @@ categories: [tech]
 tags: []
 ---
 
-I just want a SIMPLE way to connect to my home network without getting blocked by firewall and proxies with TLS inspection! What do we need?
-- Standard port 80/443
-- Nothing in the "very shady" VPN category like: openvpn, wireguard, tailscale, SSH etc.  
+I just want a SIMPLE way to connect to my home network without getting blocked by firewall and proxies with TLS inspection! What do we need?  
+:white_check_mark: Standard port 80/443  
+:white_check_mark: Nothing in the "very shady" VPN category like: openvpn, wireguard, tailscale, SSH etc.  
 
 - [TTYD](#ttyd)
 - [Setup \& Configuration](#setup--configuration)
   - [Install](#install)
   - [Getting a certificate with Certbot](#getting-a-certificate-with-certbot)
-  - [New user and permission to read cert](#new-user-and-permission-to-read-cert)
+  - [Create a new user with permission to read certificate](#create-a-new-user-with-permission-to-read-certificate)
   - [Allow users access in ufw](#allow-users-access-in-ufw)
-  - [Password which we will use to login](#password-which-we-will-use-to-login)
+  - [Setup password for logging in to ttyd](#setup-password-for-logging-in-to-ttyd)
   - [Command to be used used](#command-to-be-used-used)
-  - [Setup systemd](#setup-systemd)
+  - [Setup service with systemd](#setup-service-with-systemd)
+  - [Enable systemd](#enable-systemd)
+- [Final result](#final-result)
 
 
 ---
@@ -53,7 +55,10 @@ certbot certonly -d ${DOMAIN} --dry-run
 The log mentioned:
 > Certbot has set up a scheduled task to automatically renew this certificate in the background.
 
-Interesting!
+
+<details>
+<summary>Intersting!</summary>
+
 
 `systemctl list-timers`:
 ```sh
@@ -87,8 +92,10 @@ ExecStart=/usr/bin/certbot -q renew --no-random-sleep-on-renew
 PrivateTmp=true
 ``` 
 
+</details>
 
-## New user and permission to read cert
+
+## Create a new user with permission to read certificate
 
 ```sh
 sudo adduser --disabled-password --gecos "" termuser
@@ -108,9 +115,8 @@ sudo setfacl -m u:termuser:r /etc/letsencrypt/archive/${DOMAIN}/fullchain1.pem
 
 `sudo ufw allow from <CIDR> proto tcp to any port 7681`
 
-## Password which we will use to login 
+## Setup password for logging in to ttyd
 
-Setup the file for storing the password:
 ```sh
 sudo touch /home/termuser/.ttyenv
 sudo chown termuser:termuser sudo
@@ -121,7 +127,9 @@ sudo chmod 600 /home/termuser/.ttyenv
 
 ## Command to be used used
 
-`ttyd -p 7681 -W -t title="RP5" --ssl --ssl-cert /etc/letsencrypt/archive/term.thoren.life/fullchain1.pem   --ssl-key /etc/letsencrypt/archive/term.thoren.life/privkey1.pem -c ttyduser:${TTYD_PASS} /bin/bash`
+```sh
+ttyd -p 7681 -W -t title="RP5" --ssl --ssl-cert /etc/letsencrypt/archive/${DOMAIN}/fullchain1.pem   --ssl-key /etc/letsencrypt/archive/${DOMAIN}/privkey1.pem -c ttyduser:${TTYD_PASS} /bin/bash
+```
 
 - `-p`: port (we will portforward on the router 443-> port)
 - `-W`: make is possible to write
@@ -132,7 +140,7 @@ sudo chmod 600 /home/termuser/.ttyenv
 - `-c`: Basic auth, followed by user and password
 - `[command]`: What command the session will land into, we use bash
 
-## Setup systemd
+## Setup service with systemd
  
 ```sh
 sudo tee /etc/systemd/system/ttyd.service >/dev/null <<'EOF'
@@ -149,8 +157,8 @@ ExecStart=/usr/local/bin/ttyd \
   -W \
   -t title="RP5" \
   --ssl \
-  --ssl-cert /etc/letsencrypt/archive/term.thoren.life/fullchain1.pem \
-  --ssl-key /etc/letsencrypt/archive/term.thoren.life/privkey1.pem \
+  --ssl-cert /etc/letsencrypt/archive/${DOMAIN}/fullchain1.pem \
+  --ssl-key /etc/letsencrypt/archive/${DOMAIN}/privkey1.pem \
   -c ttyduser:${TTYD_PASS} \
   /bin/bash
 Restart=on-failure
