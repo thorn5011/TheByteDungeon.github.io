@@ -49,6 +49,7 @@ make && sudo make install
 
 ```sh
 sudo apt install certbot
+# Port 80 needs to be available externally!
 certbot certonly -d ${DOMAIN} --dry-run
 ```
 
@@ -56,8 +57,8 @@ The log mentioned:
 > Certbot has set up a scheduled task to automatically renew this certificate in the background.
 
 
-<details>
-<summary>Intersting!</summary>
+<details markdown="1">
+<summary>Intersting..</summary>
 
 
 `systemctl list-timers`:
@@ -119,7 +120,7 @@ sudo setfacl -m u:termuser:r /etc/letsencrypt/archive/${DOMAIN}/fullchain1.pem
 
 ```sh
 sudo touch /home/termuser/.ttyenv
-sudo chown termuser:termuser sudo
+sudo chown termuser:termuser /home/termuser/.ttyenv
 sudo chmod 600 /home/termuser/.ttyenv
 # Add line
 # TTYD_PASS=<PASSWORD>
