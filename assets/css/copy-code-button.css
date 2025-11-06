@@ -1,0 +1,37 @@
+.highlight {
+  position: relative;
+}
+
+.highlight pre {
+  padding-right: 75px;
+}
+
+.highlight-copy-btn {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  border: 0;
+  border-radius: 4px;
+  padding: 6px;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #b1bac4;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.highlight:hover .highlight-copy-btn {
+  opacity: 1;
+}
+
+.highlight-copy-btn:hover {
+  background-color: #49515a;
+}
+
+.highlight-copy-btn:focus,
+.highlight-copy-btn:active {
+  outline: 0;
+  opacity: 1;
+}
