@@ -15,11 +15,13 @@ I think is it well overdue to setup a small envionment of my own to do some real
 
 ---
 
-# Pre-req:
+# Pre-req (activate cgroups)
+
+> Cgroups, or control groups, are a Linux kernel feature that allows the management of resource allocation (like CPU and memory) for a collection of processes
 
 Add `cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory` to `/boot/firmware/cmdline.txt` as this enables:
 - `cgroup_enable=cpuset`: Enables the cpuset controller - process isolation to certain cores
-- `cgroup_memory`:  active memeory controller in cgroups - track and limit memory in pods
+- `cgroup_memory`:  active memory controller in cgroups - track and limit memory in pods
 - `cgroup_enable=memory`: Legacy - similar as the one above
 
 # Installation
@@ -53,7 +55,7 @@ kube-system   traefik-865bd56545-rc4lg                  1/1     Running     0   
 - `coredns`: DNS; translates `api.default.svc.cluster.local` and more
 - `helm-install`: one-time jobs to install traefik
 - `local-path-provisioner`: Automatic storage backend
-- `metrics-server`: collects stats like CPU for `k top` too wok
+- `metrics-server`: collects stats like CPU for `k top` to work
 - `svclb-traefik`: makes it possible to reach the cluster from outside
 - `traefik`: Ingress controller, handles all HTTP/HTTPS traffic
 
